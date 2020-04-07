@@ -1,11 +1,11 @@
 function cariMedian(arr) {
   median = 0;
-  arrLength = arr.length;
+  a = arr.length;
 
-  if (arrLength % 2 == 0) {
-      median += (arr[arrLength / 2 - 1] + arr[arrLength / 2]) / 2;
+  if (a % 2 == 0) {
+      median += (arr[a / 2 - 1] + arr[a / 2]) / 2;
   } else {
-      median += (arr[(arrLength - 1) / 2])
+      median += (arr[(a - 1) / 2])
   }
   return median;
 }

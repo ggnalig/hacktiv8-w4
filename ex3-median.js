@@ -1,6 +1,6 @@
 function cariMedian(arr) {
-  median = 0;
-  a = arr.length;
+  let median = 0;
+  let a = arr.length;
 
   if (a % 2 == 0) {
       median += (arr[a / 2 - 1] + arr[a / 2]) / 2;

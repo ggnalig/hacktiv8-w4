@@ -1,6 +1,6 @@
 function fpb(angka1, angka2) {
-    tempAngka1 = 0;
-    tempAngka2 = tempAngka1;
+    let tempAngka1 = 0;
+    let tempAngka2 = tempAngka1;
     for (let i = 0; i < angka1; i++) {
         if (angka1 % i == 0 && angka2 %i == 0) {
             tempAngka1 = i;

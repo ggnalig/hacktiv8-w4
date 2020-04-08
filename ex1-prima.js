@@ -1,5 +1,5 @@
 function angkaPrima(angka) {
-    var hasil =  true;
+    let hasil =  true;
     for (let i = 2; i < angka; i++) {
         if (angka % i === 0) {
             hasil = false;

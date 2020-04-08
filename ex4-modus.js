@@ -1,7 +1,7 @@
 function cariModus(arr) {
-    var freq = {};
-    var b = 0;
-    var modus;
+    let freq = {};
+    let b = 0;
+    let modus;
     
     for(var i = 0; i < arr.length; i++){
         var num = arr[i];

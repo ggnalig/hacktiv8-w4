@@ -1,6 +1,6 @@
 function ubahHuruf(kata) {
-    kamus = 'abcdefghijklmnopqrstuvwxyz'; 
-    temp = '';
+    let kamus = 'abcdefghijklmnopqrstuvwxyz'; 
+    let temp = '';
     
     for (let i = 0; i <= kata.length-1; i++) {
         for (let j = 0; j <= kamus.length; j++) {

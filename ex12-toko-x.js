@@ -15,7 +15,7 @@ function countProfit(shoppers) {
         for (let i in listBarang) {
             let objPenjualan = {};
             let arrShoppers = [];
-            let stok = [listBarang[i][2]];
+            let stok = listBarang[i][2];
             for (let j in shoppers) {
                 if (listBarang[i][0] === shoppers[j].product && stok >= shoppers[j].amount) {
                     arrShoppers.push(shoppers[j].name);

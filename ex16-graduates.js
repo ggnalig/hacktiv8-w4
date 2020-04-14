@@ -1,19 +1,31 @@
 function graduates (students) {
   
   let namaKelas = [];
+  let kelas = [];
   let hasil = {};
   
   if (students.length == 0) {
     return hasil;
   }
-  
+
   for (let i = 0; i < students.length; i++) {
-    let kelasKey = students[i].class;
-    if (namaKelas.includes(kelasKey)) {
-      continue;
-    } else {
-      namaKelas.push(kelasKey);
+    kelas.push(students[i].class);
+  }
+  
+  found = false;
+  count = 0;
+  for (let x = 0; x < kelas.length; x++) {
+    for (let y = 0; y < namaKelas.length; y++) {
+      if (kelas[x] == namaKelas[y]) {
+        found = true;
+      }
     }
+    count++;
+    if (count == 1 && found == false) {
+      namaKelas.push(kelas[x]);
+    }
+    count = 0;
+    found = false; 
   }
   
   for (let j = 0; j < namaKelas.length; j++) {

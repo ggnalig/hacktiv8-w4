@@ -1,13 +1,26 @@
 function fpb(angka1, angka2) {
-    let tempAngka1 = 0;
-    let tempAngka2 = tempAngka1;
-    for (let i = 0; i < angka1; i++) {
-        if (angka1 % i == 0 && angka2 %i == 0) {
-            tempAngka1 = i;
-            tempAngka2 = i;
+    let besar = 0;
+    let kecil = 0;
+
+    if (angka1 > angka2) {
+        besar = angka1;
+    } else {
+        kecil = angka1;
+    }
+
+    if (angka2 > angka1) {
+        besar = angka2;
+    } else {
+        kecil = angka2;
+    }
+    
+    let tempAngka2 = [];
+    for (let i = 0; i < besar; i++) {
+        if (besar % i == 0 && kecil %i == 0) {
+            tempAngka2.push(i);
         } 
     }
-    return tempAngka2;
+    return Math.max(...tempAngka2);
 }
 
 
@@ -17,4 +30,9 @@ console.log(fpb(12, 16)); // 4
 console.log(fpb(50, 40)); // 10
 console.log(fpb(22, 99)); // 11
 console.log(fpb(24, 36)); // 12
-console.log(fpb(17, 23)); // 1 
+console.log(fpb(17, 23)); // 1
+console.log(fpb(88, 22));
+console.log(fpb(22, 88)); // 1
+console.log(fpb(44, 22));
+console.log(fpb(66, 22));
+console.log(fpb(22, 110));
